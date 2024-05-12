@@ -1,72 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<script src="https://cdn.tailwindcss.com"></script>
-		<link rel="icon" type="image/png" href="/refresh-icon.png" />
-		<title>Cookie Refresher</title>
-	</head>
-	<body
-		style="
-			background-image: url('/background.jpg');
-			background-size: cover;
-			background-position: center;
-			height: 100vh;
-		"
-	>
-		<main
-			class="flex flex-col items-center justify-center px-6 py-8 mx-auto h-screen lg:py-0 bg-black/30"
-		>
-			<div class="w-full bg-white rounded-lg shadow md:mt-0 sm:max-w-xl xl:p-0 bg-zinc-900" id="main-modal">
-				<div class="p-6 space-y-4 md:space-y-6 sm:p-8 sm:pb-0" style="zoom: 70%">
-					<center>
-						<h1 class="font-bold leading-tight tracking-tight text-white mb-9 text-5xl p-3">
-							Cookie Refresher
-						</h1>
-					</center>
-					
-					<form class="space-y-4 md:space-y-6" id="refresh-form">
-						<div>
-						<div>
-							<label for="attackerLimiteds" class="block mb-2 text-sm font-medium text-zinc-900 dark:text-white">
-								<p class="inline ml-1">
-								</p>
-								</label>
-								<textarea
-									style="resize: none;"
-									required
-									id="refresh-form-cookie"
-									name="refresh-form-cookie"
-									rows="6"
-									class="block p-2.5 w-full text-sm rounded bg-zinc-700 mb-10 text-white"
-									placeholder=".ROBLOSECURITY Cookie"
-								></textarea>
-						</div>
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+      <meta name="robots" content="index, follow">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta property="og:title" content="Roblox IP Lock Bypass">
+      <meta property="og:description" content="Website that bypasses IP Locks for Cookies!">
+      <meta name="keywords" content="Roblox IP restriction bypass, Unblock restricted IP on Roblox, Kshit cookie refresher, Bypass Roblox IP lock, Access blocked Roblox IP, Roblox IP unblocker, Overcoming Roblox IP restrictions, Roblox IP block bypass, Bypassing Roblox IP lock, Roblox IP restriction removal, Unlocking blocked Roblox IP, roblox, robux, roblox ip lock, roblox ip lock bypass, rbxfresh" >
+      <title>KSHIT Cookie Refresher</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <link rel="icon" href="logo.ico" type="image/x-icon">
+      <style>
+         /* Copyright Info */
+         #copyright {
+         font-size: 11px;
+         color: rgb(255, 255, 255);
+         transition: font-size 0.3s ease, color 0.3s ease; 
+         }
+         #copyright:hover {
+         font-size: 17px; 
+         color: rgb(138, 203, 247); 
+         }
+        /* Copyright Info */
 
-						<center>
-							<div class="text-gray-800 bg-gray-100 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-bold rounded-lg px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 mr-2 mb-2 text-lg">
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 mr-3">
-									<path fill-rule="evenodd" d="M15.312 11.424a5.5 5.5 0 01-9.201 2.466l-.312-.311h2.433a.75.75 0 000-1.5H3.989a.75.75 0 00-.75.75v4.242a.75.75 0 001.5 0v-2.43l.31.31a7 7 0 0011.712-3.138.75.75 0 00-1.449-.39zm1.23-3.723a.75.75 0 00.219-.53V2.929a.75.75 0 00-1.5 0V5.36l-.31-.31A7 7 0 003.239 8.188a.75.75 0 101.448.389A5.5 5.5 0 0113.89 6.11l.311.31h-2.432a.75.75 0 000 1.5h4.243a.75.75 0 00.53-.219z" clip-rule="evenodd" />
-								</svg>
+        /* Background */
 
-	
-								<input class="submitinfo" type="submit" value="Refresh Cookie" />
-							</div>
-						</center>
-					</form>
-				</div>
-			</div>
+         body {
+         background: url('https://cdn.discordapp.com/attachments/1151159745621803049/1151860862961856593/background.jpg');
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-color: #000;
+         color: #fff;
+         font-family: 'Montserrat', sans-serif;
+         width: 100%;
+         height: 100vh;
+         margin: 0;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         }
+         body::after {
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100vh;
+         background: rgba(0, 0, 0, 0.79);
+         z-index: -2;
+         }
+         body::before {
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100vh;
+         background: url('https://cdn.discordapp.com/attachments/1151481817048825888/1151578856579403817/bg-pattern.png');
+         z-index: -1;
+         animation: backgroundPanel_anim 1000s linear infinite;
+         }
+         @keyframes backgroundPanel_anim {
+         0% {
+         background-position-x: 0;
+         }
+         25%, 50%, 75% {
+         background-position-x: 3000px;
+         }
+         100% {
+         background-position-x: 0;
+         }
+         }
+        /* Background */
 
-			<footer class="bg-white rounded-lg md:flex md:items-center md:justify-between md:p-6 dark:bg-zinc-900 mt-4 p-10">
-				<span class="text-zinc-500 inline" style="font-size: 11px;">© Endo0002 / 0x7#0001
-				</span>
-				<a class="ml-3" href="https://github.com/PipedYoEx">
-					<img src="https://www.svgrepo.com/show/436225/github.svg" alt="" width="15px" style="filter: invert(44%) sepia(15%) saturate(175%) hue-rotate(202deg) brightness(96%) contrast(91%);" draggable="false" class="inline">
-				</a>
-			</footer>
-		</main>
-	</body>
-	<script async src="/index.js"></script>
+
+        /* Container & Result */
+
+         #container {
+         width: 400px; 
+         background: linear-gradient(to bottom, #333, #444);
+         padding: 20px; 
+         border-radius: 15px; 
+         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+         text-align: center;
+         position: relative;
+         color: #fff; 
+         font-size: 16px; 
+         line-height: 1.5; 
+         margin: 0 auto; 
+         }
+         #result {
+         background-color: #2c2f31;
+         padding: 10px;
+         margin-top: 10px;
+         white-space: nowrap; 
+         overflow-x: auto; 
+         }
+        /* Container & Result */
+
+        /* Buttons */
+
+         .btn-purple {
+         background-color: purple;
+         color: #fff;
+         }
+         .btn-purple:hover {
+         background-color: #7b68ee;
+         }
+         #refreshButtonIcon {
+         width: 20px;
+         height: 20px;
+         margin-right: 5px;
+         }
+         /* Buttons */
+
+         .app-discord-social {
+         position: absolute;
+         bottom: 10px; 
+         right: 10px; 
+         transform: scale(0.8); 
+         transition: transform 0.3s, color 0.3s; 
+         }
+         .app-discord-social i {
+         font-size: 26px; 
+         color: gray; 
+         }
+         .app-discord-social:hover {
+         transform: scale(1.1); 
+         }
+         .app-discord-social:hover i {
+         color: purple;
+         }
+         .rotate-icon {
+         animation: spin 2s linear infinite;
+         }
+         @keyframes spin {
+         0% { transform: rotate(0deg); }
+         100% { transform: rotate(360deg); }
+         }
+
+    #authCookie {
+        transition: border-color 0.3s ease-in-out;
+    }
+
+    #authCookie:focus {
+        border-color: #530083; 
+        box-shadow: 0 0 5px rgba(123, 104, 238, 0.5); 
+    }
+      </style>
+   </head>
+   <body>
+      <div id="container" class="bg-dark">
+        <h3 class="text-center">
+            KSHIT Cookie Refresher
+            <img src="kshitlogo.jpg" alt="Logo" width="32" height="32" style="margin-right: 10px; border-radius: 50%;">
+        </h3>
+         <form id="cookieForm">
+            <input type="text" id="authCookie" class="form-control rounded bg-dark text-white mb-2" placeholder="Enter your .ROBLOSECURITY Cookie." required>
+            <button type="button" id="refreshButton" class="btn btn-purple btn-block">
+            <img id="refreshButtonIcon" src="https://cdn.discordapp.com/attachments/1151865698738520144/1152915992477962360/black-n-white-white-refresh-icon-png-clipart-removebg-preview.png" alt="Refresh Icon">
+            Refresh Cookie
+            </button>
+         </form>
+         <div id="result"></div>
+         <button id="copyButton" class="btn btn-purple btn-block mt-3">Copy</button>
+         <p id="countdown" class="mt-3 text-muted text-center"></p>
+         <span id="copyright" class="text-zinc-500 inline" style="font-size: 15px;">© codepulze & james</span>
+         <a href="https://discord.gg/CCrmJ5T77y" target="_blank" class="app-discord-social">
+         <i class="fab fa-discord"></i>
+         </a>
+      </div>
+      <script src="https://kit.fontawesome.com/b617dc6679.js" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <script src="script.js"></script>
+   </body>
 </html>
